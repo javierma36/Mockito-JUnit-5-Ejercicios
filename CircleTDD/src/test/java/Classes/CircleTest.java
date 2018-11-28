@@ -73,7 +73,7 @@ public class CircleTest {
     
     @Test
     public void circleArea(){
-        double area = 2 * Math.PI * Math.pow(circle.getRadius(), 2);
+        double area = Math.PI * Math.pow(circle.getRadius(), 2);
         assertThat(circle.getArea()).isEqualTo(area);
     }
     
