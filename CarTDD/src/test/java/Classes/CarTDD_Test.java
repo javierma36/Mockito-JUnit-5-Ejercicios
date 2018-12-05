@@ -41,7 +41,8 @@ public class CarTDD_Test {
     
     @Test
     public void carWithPassengers(){
-        assertThat(car.getEngine()).isNotNull();
+        passengers.add(p1);
+        assertThat(car.getPassengers().size()).isGreaterThan(0);
     }
     
     @Test

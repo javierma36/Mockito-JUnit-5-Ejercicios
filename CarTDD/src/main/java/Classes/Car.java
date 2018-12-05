@@ -33,6 +33,10 @@ public class Car {
     public String getColor() {
         return this.color;
     }
+    
+    public Set<Passenger> getPassengers(){
+        return this.passengers;
+    }
 
     public void addPassenger(Passenger passenger) throws SizeLimitExceededException {
         if (passengerCapacity == 0) {
