@@ -1,7 +1,10 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * In this case we have a SUT and DOC. DOC inject data to the SUT
+ * To learn in this exercise:
+ * a) Parameterized test with user defined class parameter.
+ * b) Using Test stub to inject data to SUT when toString() method in SUT is called.
+ * 
+ *
  */
 package Classes;
 
@@ -48,10 +51,6 @@ public class BookTest {
         assertThat(book.getAutor()).isNotNull();
     }
     
-    /*
-    I will test setters and getters in one test for each parameter.
-    */
-    
     @ParameterizedTest
     @ValueSource(doubles = {20.0, 25.5, 35.5})
     public void bookPriceChange(double newPrice){
@@ -82,9 +81,4 @@ public class BookTest {
                 + "(" + book.getAutor().getGender() + ") at " + book.getAutor().getEmail();
         assertThat(book.toString()).isEqualTo(expected);
     }
-    
-    
-    
-    
-    
 }
